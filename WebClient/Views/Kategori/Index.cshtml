@@ -1,0 +1,33 @@
+﻿@model IEnumerable<BO.Kategori>
+@{
+    ViewBag.Title = "Kategori";
+}
+
+<h2>Kategori</h2>
+@Html.ActionLink("Tambah Kategori","Insert")
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Kategori ID</th>
+            <th>Nama Kategori</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.KategoriID</td>
+                <td>@item.NamaKategori</td>
+                <td>@Html.ActionLink("edit","Update","Kategori",new { id=item.KategoriID },null)</td>
+                <td>@Html.ActionLink("delete", "Delete", "Kategori", new { id = item.KategoriID }, null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

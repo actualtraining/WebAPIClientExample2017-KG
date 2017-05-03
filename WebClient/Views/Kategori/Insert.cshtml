@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Insert";
+}
+
+@using (Html.BeginForm("InsertPost", "Kategori", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Insert Kategori</legend>
+        <label for="NamaKategori">Nama Kategori :</label><br />
+        <input type="text" name="NamaKategori" /><br /><br />
+        <input type="submit" value="Submit" class="btn btn-default" />
+    </fieldset>
+}
+
+@ViewBag.Error
+

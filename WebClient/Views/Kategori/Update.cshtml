@@ -1,0 +1,18 @@
+﻿@model BO.Kategori
+@{
+    ViewBag.Title = "Update";
+}
+
+@using (Html.BeginForm("UpdatePost", "Kategori", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Update Kategori</legend>
+        <label for="KategoriID">Kategori ID :</label><br />
+        <input type="text" name="KategoriID" value="@Model.KategoriID" readonly="readonly" /><br /><br />
+        <label for="NamaKategori">Nama Kategori :</label><br />
+        <input type="text" name="NamaKategori" value="@Model.NamaKategori" /><br /><br />
+        <input type="submit" value="Edit" class="btn btn-default" />
+    </fieldset>
+}
+
+@ViewBag.Error
